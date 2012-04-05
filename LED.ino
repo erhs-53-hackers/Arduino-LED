@@ -42,16 +42,23 @@ private:
   LED* red;
   LED* green;
   LED* blue;
-};
+};/*
 void rgbLED::showRed() {
   red.on();
   green.off();
   blue.off();
-}
+}*/
 // todo:  make all of the following functions part
 // of the rgbLED class!
 
 // this one is mostly done
+
+LED red(13);  
+LED green(12);
+LED blue(11);
+
+//rgbLED triled(red, green, blue);
+
 void showRed() {
   red.on();
   green.off();
@@ -109,11 +116,9 @@ void loopColors() {
   delay(500);
 }
 
-LED red(13);  
-LED green(12);
-LED blue(11);
 
-rgbLED triled(red, green, blue);
+
+
 
 void setup() {
   Serial.begin(9600);
@@ -121,7 +126,7 @@ void setup() {
 }
 
 void loop() {
-  triled.showRed();
+  showRed();
 }
 
 
