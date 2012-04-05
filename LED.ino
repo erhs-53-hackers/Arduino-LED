@@ -31,7 +31,11 @@ public:
     green = greenled;
     blue = blueled;
   }
-  void showRed();
+  void showRed() {
+    red.on();
+    green.off();
+    blue.off();
+  }
   void showGreen();
   void showBlue();
   void showYellow();
