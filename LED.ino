@@ -32,9 +32,9 @@ public:
     blue = blueled;
   }
   void showRed() {
-    red.on();
-    green.off();
-    blue.off();
+    red->on();
+    green->off();
+    blue->off();
   }
   void showGreen();
   void showBlue();
@@ -61,13 +61,13 @@ LED red(13);
 LED green(12);
 LED blue(11);
 
-//rgbLED triled(red, green, blue);
+rgbLED triled(red&, green&, blue&);
 
 void showRed() {
-  red.on();
-  green.off();
-  blue.off();
-}
+  red->on();
+  green->off();
+  blue->off();
+}/*
 void showGreen() {
   red.off();
   green.on();
@@ -118,11 +118,7 @@ void loopColors() {
   delay(500);
   showWhite();
   delay(500);
-}
-
-
-
-
+}*/
 
 void setup() {
   Serial.begin(9600);
