@@ -1,5 +1,11 @@
 /*
-  Creates a class for the LED, and demonstrates its capabilities
+  Creates a class for the LED
+  Creates a class for the rgbLED through implementing the LED
+  Demonstrates the capabilites of both classes
+  ToDO:  Separate classes into header files and move functions 
+         out of main function body.
+  ToDO:  Add function in rgbLED class to cycle through every 
+         color combination
  */
 
 class LED {
@@ -19,6 +25,9 @@ public:
     delay(delayTime * 1000);
     off();
     delay(delayTime * 1000);
+  }
+  void setValue(int value) {
+    analogWrite(pinNumber, value);
   }
 private:
   int pinNumber;
@@ -87,52 +96,32 @@ public:
     showWhite();
     delay(500);
   }
+  void setColor(int redVal, int greenVal, int blueVal) {
+    red->setValue(redVal);
+    green->setValue(greenVal);
+    blue->setValue(blueVal);
+  }
 private:
   LED* red;
   LED* green;
   LED* blue;
 };
 
-LED red(13);  
-LED green(12);
-LED blue(11);
+LED red(3);  
+LED green(6);
+LED blue(5);
 
 rgbLED triled(&red, &green, &blue);
-
-int buttonPin = 0;
 
 void setup() {
   Serial.begin(9600);
   Serial.println("Launching Program");
-  pinMode(buttonPin, INPUT);
 }
 
-int loopCount;
-int val;
-int analogIn = A0;
-int buttonVal;
-
 void loop() {
-  buttonVal = digitalRead(buttonPin);
-  val = analogRead(analogIn);
-
-  if (buttonVal == LOW) {
-
-    if (loopCount > 6) loopCount = 0;
-
-    if (loopCount == 0) triled.showRed();
-    if (loopCount == 1) triled.showYellow();
-    if (loopCount == 2) triled.showGreen();
-    if (loopCount == 3) triled.showBlue();
-    if (loopCount == 4) triled.showMagenta();
-    if (loopCount == 5) triled.showCyan();
-    if (loopCount == 6) triled.showWhite();
-    delay(val);
-
-    triled.showNone();
-    delay(val);
-
-    ++loopCount;
+  for (int i = 0; i < 256; i++) {
+    triled.setColor(102, 0, 0);
+    delay(10);
   }
 }
 
