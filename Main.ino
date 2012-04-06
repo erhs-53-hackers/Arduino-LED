@@ -8,7 +8,7 @@
  ToDO:  Add function in rgbLED class to cycle through every 
  color combination
  */
-
+/*
 class LED {
 public:
   LED(int _pinNumber) {
@@ -33,6 +33,7 @@ public:
 private:
   int pinNumber;
 };
+*/
 
 class rgbLED {
 public:
