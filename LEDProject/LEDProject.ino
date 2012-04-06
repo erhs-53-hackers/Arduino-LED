@@ -17,6 +17,8 @@ void setup() {
 void loop() {
   if (button.isPushed()) {
     red.on();
+    int time = button.getHeldTime();
+    Serial.println(time);
   } else {
     red.off();
   }

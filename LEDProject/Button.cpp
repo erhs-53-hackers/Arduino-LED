@@ -17,3 +17,11 @@ bool Button::isPushed() {
 		return false;
 	}
 }
+int Button::getHeldTime() {
+	int held = 0;
+	while (this->isPushed()) {
+		delay(1);
+		held++;
+	}
+	return held;
+}
