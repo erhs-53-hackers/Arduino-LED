@@ -1,4 +1,4 @@
-
+#include <arduino.h>
 #include "LED.h"
 
 class rgbLED {

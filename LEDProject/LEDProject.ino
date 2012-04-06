@@ -1,4 +1,3 @@
-
 #include "rgbLED.h"
 
 LED red(6);  

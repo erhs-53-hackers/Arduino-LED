@@ -1,5 +1,5 @@
+#include <arduino.h>
 #include "rgbLED.h"
-
 
 rgbLED::rgbLED(LED* redled, LED* greenled, LED* blueled) {
   this->red = redled;
