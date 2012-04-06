@@ -1,4 +1,5 @@
 #include "LED.h"
+#include "rgbLED.h"
 /*
   Creates a class for the LED
  Creates a class for the rgbLED through implementing the LED
@@ -8,7 +9,7 @@
  ToDO:  Add function in rgbLED class to cycle through every 
  color combination
  */
-
+/*
 class rgbLED {
 public:
   rgbLED(LED* redled, LED* greenled, LED* blueled) {
@@ -82,10 +83,11 @@ private:
   LED* green;
   LED* blue;
 };
+*/
 
-LED red(3);  
-LED green(6);
-LED blue(5);
+LED red(6);  
+LED green(5);
+LED blue(3);
 
 rgbLED triled(&red, &green, &blue);
 
