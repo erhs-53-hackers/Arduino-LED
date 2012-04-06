@@ -12,7 +12,6 @@ Button button(2);
 void setup() {
   Serial.begin(9600);
   Serial.println("Launching Program");
-  pinMode(buttonPin, INPUT);
 }
 
 void loop() {
