@@ -119,10 +119,7 @@ void setup() {
 }
 
 void loop() {
-  for (int i = 0; i < 256; i++) {
-    triled.setColor(102, 0, 0);
-    delay(10);
-  }
+  triled.setColor(100, 255, 100);
 }
 
 
