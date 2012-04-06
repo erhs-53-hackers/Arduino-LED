@@ -6,10 +6,10 @@ LED::LED(int _pinNumber) {
   pinMode(pinNumber, OUTPUT);
 }
 void LED::on() {
-  digitalWrite(pinNumber, HIGH);
+  digitalWrite(this->pinNumber, HIGH);
 }
 void LED::off() {
-  digitalWrite(pinNumber, LOW);
+  digitalWrite(this->pinNumber, LOW);
 }
 void LED::blink(double delayTime) {
   on();
@@ -18,5 +18,5 @@ void LED::blink(double delayTime) {
   delay(delayTime * 1000);
 }
 void LED::setValue(int value) {
-  analogWrite(pinNumber, value);
+  analogWrite(this->pinNumber, value);
 }
