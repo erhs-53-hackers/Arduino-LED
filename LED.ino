@@ -1,11 +1,12 @@
+#include "LED.h"
 /*
   Creates a class for the LED
-  Creates a class for the rgbLED through implementing the LED
-  Demonstrates the capabilites of both classes
-  ToDO:  Separate classes into header files and move functions 
-         out of main function body.
-  ToDO:  Add function in rgbLED class to cycle through every 
-         color combination
+ Creates a class for the rgbLED through implementing the LED
+ Demonstrates the capabilites of both classes
+ ToDO:  Separate classes into header files and move functions 
+ out of main function body.
+ ToDO:  Add function in rgbLED class to cycle through every 
+ color combination
  */
 
 class LED {
@@ -119,8 +120,9 @@ void setup() {
 }
 
 void loop() {
-  triled.setColor(100, 255, 100);
+  triled.setColor(10, 10, 10);
 }
+
 
 
 
