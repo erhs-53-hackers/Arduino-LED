@@ -8,32 +8,6 @@
  ToDO:  Add function in rgbLED class to cycle through every 
  color combination
  */
-/*
-class LED {
-public:
-  LED(int _pinNumber) {
-    pinNumber = _pinNumber;
-    pinMode(pinNumber, OUTPUT);
-  }
-  void on() {
-    digitalWrite(pinNumber, HIGH);
-  }
-  void off() {
-    digitalWrite(pinNumber, LOW);
-  }
-  void blink(double delayTime) {
-    on();
-    delay(delayTime * 1000);
-    off();
-    delay(delayTime * 1000);
-  }
-  void setValue(int value) {
-    analogWrite(pinNumber, value);
-  }
-private:
-  int pinNumber;
-};
-*/
 
 class rgbLED {
 public:
