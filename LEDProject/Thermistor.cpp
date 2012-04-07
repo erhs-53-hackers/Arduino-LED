@@ -14,16 +14,16 @@ Thermistor::Thermistor(int _pinNumber) {
 	this->pinNumber = _pinNumber;
 	pinMode(this->pinNumber, INPUT);
 }
-double Thermistor::getVoltage() {
-	this->voltage = analogRead(this->pinNumber);
-	return this->voltage;
+int Thermistor::getValue() {
+	this->value = analogRead(this->pinNumber);
+	return this->value;
 }
 double Thermistor::getTempKelvin() {
-	this->getVoltage();
+	this->getValue();
 	long resistance; double temp;
-	resistance = ((10240000/this->voltage) - 10000);
+	resistance = ((10240000/this->value) - 10000);
 	temp = log(resistance);
-	temp = 1 / (A + (B + (C * temp * temp ))* temp );
+	temp = 1 / (A + (B + (C * temp * temp ))* temp);
 	return temp;
 }
 double Thermistor::getTempCelcius() {

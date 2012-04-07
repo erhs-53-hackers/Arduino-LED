@@ -3,11 +3,11 @@
 class Thermistor {
 public:
 	Thermistor(int _pinNumber);
-	double getVoltage();
+	int getValue();
 	double getTempKelvin();
 	double getTempCelcius();
 	double getTempFahrenheit();
 private:
-	double voltage;
+	int value;
 	int pinNumber;
 };
