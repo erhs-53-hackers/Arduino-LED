@@ -1,16 +1,25 @@
 #include "rgbLED.h"
 #include "Button.h"
 
-LED red(13);
-LED green(5);
-LED blue(3);
+#define redPin 13
+#define greenPin 5
+#define bluePin 3
+#define buttonPin 2
 
+// create three LED instances
+LED red(redPin);
+LED green(greenPin);
+LED blue(bluePin);
+
+// create an rgbLED instance, using the
+// pointer adresses of the 3 LEDs
 rgbLED triled(&red, &green, &blue);
 
-Button button(2);
+// create an instance of a digital button
+Button button(buttonPin);
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(9600); // begin serial communication at 9600 bps
   Serial.println("Launching Program");
 }
 
@@ -22,5 +31,5 @@ void loop() {
   } else {
     red.off();
   }
-
 }
+
