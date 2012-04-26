@@ -14,12 +14,19 @@ class rgbLED {
 public:
   rgbLED(LED* redled, LED* greenled, LED* blueled);
   void showRed();
+  void showRed(int intensity);
   void showGreen();
+  void showGreen(int intensity);
   void showBlue();
+  void showBlue(int intensity);
   void showYellow();
+  void showYellow(int intensity);
   void showMagenta();
+  void showMagenta(int intensity);
   void showCyan();
+  void showCyan(int intensity);
   void showWhite();
+  void showWhite(int intensity);
   void showNone();
   void loopColors();
   void setColor(int redVal, int greenVal, int blueVal);
